@@ -5,21 +5,21 @@ const projects = [
   {
     id: 1,
     title: "โครงการจบ ปวส.2: เกม 3D",
-    description: "แนว Adventure สร้างใน Unity โดยใช้ภาษา C# ออกแบบโมเดล 3D เองด้วย Blender",
-    image: "https://i.imgur.com/XAOa2Tk.png",
+    description: "แนว Adventure สร้างใน Unity โดยใช้ภาษา C# ออกแบบโมเดล 3D เองด้วย Blender (กำลังพัฒนา)",
+    image: "https://i.ibb.co/spQgjgVz/image-2025-11-09-233528588.png",
   },
   {
     id: 2,
     title: "โครงการจบ ปวช.3: เกม 2D",
     description: "แนวยิงศัตรูและผ่านด่าน สร้างใน Unity โดยใช้ภาษา C#",
-    image: "https://i.imgur.com/XAOa2Tk.png",
+    image: "https://i.ibb.co/Vc9YNBxQ/image-2025-11-09-233900555.png",
     googleSiteLink: "https://sites.google.com/view/hackingbankgame",
   },
   {
     id: 3,
     title: "พัฒนา Bot Discord โดย Discord.JS (Node.Js)",
-    description: "Chat Bot ที่ใช้ AI ของ Open AI และ Gemini เพื่อสื่อสารภาษาไทยได้ดีขึ้น",
-    image: "https://i.imgur.com/XAOa2Tk.png",
+    description: "Chat Bot ที่ใช้ AI ของ Open AI (ChatGPT)",
+    image: "https://i9.ytimg.com/vi/Bvsw8ePqwwo/maxresdefault.jpg?time=1762706400000&sqp=COCHw8gG&rs=AOn4CLAMSa3vhWaT80nQgGzhVfVFzXSrrw",
     githubLink: "https://github.com/Puxpui/DiscordBotWithChatGPT",
     youtubeLink: "https://youtu.be/Bvsw8ePqwwo",
   },
@@ -27,28 +27,28 @@ const projects = [
     id: 4,
     title: "พัฒนาเว็บไซต์ E-Commerce",
     description: "Front-End และระบบ Login ด้วย React (Next.js), MongoDB",
-    image: "https://i.imgur.com/XAOa2Tk.png",
+    image: "https://i.ibb.co/fGMVdH9q/image-2025-11-09-235655639.png",
     githubLink: "https://github.com/Puxpui/eclipse-store",
   },
   {
     id: 5,
     title: "พัฒนาเว็บไซต์รวม 'หนึ่งตำบล หนึ่งผลิตภัณฑ์'  (OTOP)",
     description: "สำหรับการทดสอบมาตรฐานวิชาชีพ (โดย Google Site)",
-    image: "https://i.imgur.com/XAOa2Tk.png",
+    image: "https://i.ibb.co/5hXqh5M5/image-2025-11-09-235944391.png",
     googleSiteLink: "https://sites.google.com/view/otopsiteby-mongkon",
   },
   {
     id: 6,
     title: "พัฒนามอดสำหรับเกม Minecraft",
-    description: "พัฒนาโดยภาษา Java) เป็นการเขียนโปรแกรมภาษา Java ครั้งแรก ซึ่งเป็นงานเล็ก ๆ",
-    image: "https://i.imgur.com/XAOa2Tk.png",
+    description: "พัฒนาโดยภาษา Java เป็นการเขียนโปรแกรมภาษา Java ครั้งแรก ซึ่งเป็นงานเล็ก ๆ",
+    image: "https://i.ibb.co/RkszVHF8/image-2025-11-10-000136870.png",
     githubLink: "https://github.com/Puxpui/Minecraft-Mod-MineTime-for-1.19.2",
   },
   {
     id: 7,
     title: "พัฒนาเว็บไซต์คำนวนค่าต่าง ๆ ในชีวิตประจำวัน",
     description: "พัฒนาด้วย HTML/CSS พื้นฐาน และ JavaScript เป็น Project ในคอร์สเรียนของ borntoDev ทำให้ได้เรียนรู้การทำงานหลาย ๆ อย่างในพื้นฐานของภาษานี้",
-    image: "https://i.imgur.com/XAOa2Tk.png",
+    image: "https://i.ibb.co/jvTmkNjb/image-2025-11-10-000504553.png",
     githubLink: "https://github.com/Puxpui/all-you-can-cal",
     youtubeLink: "https://youtu.be/CVqjbkoZXUo",
   },
@@ -119,7 +119,7 @@ export default function Home() {
                   <div className="text-4xl mb-3">🎂</div>
                   <h3 className="font-semibold text-lg mb-2">I was born</h3>
                   <p className="text-gray-600 text-base">จุดเริ่มต้นของผมเกิดขึ้นที่นี่</p>
-                  <p className="text-gray-600 text-base">อำเภอเล็ก ๆ ใจหวัดหนองคาย</p>
+                  <p className="text-gray-600 text-base">อำเภอเล็ก ๆ ในจังหวัดหนองคาย</p>
                 </div>
                 <div></div>
                 <div></div>
@@ -141,15 +141,26 @@ export default function Home() {
                   <p className="flex justify-end text-gray-500 text-[15px]">18 March 2024</p>
                   <div className="text-4xl mb-3">🎓</div>
                   <h3 className="font-semibold text-lg mb-2">Graduation</h3>
-                  <p className="text-gray-600 text-base">สำเร็จการศึกษา<br />ระดับประกาศนียบัตรวิชาชีพ</p>
+                  <p className="text-gray-600 text-base">สำเร็จการศึกษา<br />ระดับประกาศนียบัตรวิชาชีพ<br />สาขาคอมพิวเตอร์ธุรกิจ</p>
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow-md">
                   <p className="flex justify-end text-gray-500 text-[15px]">2026</p>
                   <div className="text-4xl mb-3">📖</div>
                   <h3 className="font-semibold text-lg mb-2">Studying</h3>
-                  <p className="text-gray-600 text-base">กำลังศึกษา<br />ระดับประกาศนียบัตรวิชาชีพขั้นสูง</p>
+                  <p className="text-gray-600 text-base">กำลังศึกษา<br />ระดับประกาศนียบัตรวิชาชีพขั้นสูง<br />สาขาเทคโนโลยีธุรกิจดิจิทัล</p>
                 </div>
               </div>
+              <div className="flex justify-center mt-10 animate-bounce cursor-pointer hover:scale-110 transition-transform" onClick={() => scrollToSection("project-section")}>
+              <div className="w-[50px] h-[50px] flex items-center justify-center">
+                <svg viewBox="-19.04 0 75.804 75.804" xmlns="http://www.w3.org/2000/svg" fill="#000000" transform="rotate(90)">
+                  <g id="SVGRepo_iconCarrier">
+                    <g id="Group_65" data-name="Group 65" transform="translate(-831.568 -384.448)">
+                      <path id="Path_57" data-name="Path 57" d="M833.068,460.252a1.5,1.5,0,0,1-1.061-2.561l33.557-33.56a2.53,2.53,0,0,0,0-3.564l-33.557-33.558a1.5,1.5,0,0,1,2.122-2.121l33.556,33.558a5.53,5.53,0,0,1,0,7.807l-33.557,33.56A1.5,1.5,0,0,1,833.068,460.252Z" fill="#6e6e6e"></path>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+            </div>
             </div>
           </div>
 
@@ -190,7 +201,7 @@ export default function Home() {
           </div>
 
           {/* Contact Section */}
-          <div id="contact-section" className="min-h-screen flex flex-col justify-center items-center bg-gray-100 px-8">
+          <div id="contact-section" className="min-h-screen flex flex-col justify-center items-center bg-white px-8">
             <h2 className="text-4xl font-bold mb-8">Contact Me</h2>
             <div className="flex flex-wrap justify-center gap-6">
               <a href="https://www.facebook.com/puxpui" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
