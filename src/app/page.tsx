@@ -64,7 +64,6 @@ export default function Home() {
 
   return (
     <div className="w-full">
-      {/* Navbar */}
       <nav className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md h-[65px] w-full text-black z-50 shadow-sm">
         <div className="flex justify-between items-center px-6 md:px-[45px] h-full">
           <div className="text-[20px] font-bold cursor-pointer">Puxpui</div>
@@ -79,7 +78,6 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Hero Section */}
       <div id="hero-section" className="flex justify-center items-center h-screen text-[50px] font-semibold flex-col relative">
         {!isClicked ? (
           <div className="animate-bounce text-[100px] cursor-pointer hover:scale-110 transition-transform" onClick={() => setIsClicked(true)}>🌏</div>
@@ -107,10 +105,8 @@ export default function Home() {
         )}
       </div>
 
-      {/* Render Sections Only If Clicked */}
       {isClicked && (
         <>
-          {/* About Section */}
           <div id="about-section" className="flex justify-center items-center bg-gradient-to-b from-gray-50 to-white bg-opacity-95 px-8 z-50">
             <div className="w-full h-[90vh] overflow-y-auto rounded-2xl p-8 bg-clear">
               <div className="grid grid-cols-2 gap-6 mt-8 max-w-2xl mx-auto">
@@ -150,21 +146,25 @@ export default function Home() {
                   <p className="text-gray-600 text-base">กำลังศึกษา<br />ระดับประกาศนียบัตรวิชาชีพขั้นสูง<br />สาขาเทคโนโลยีธุรกิจดิจิทัล</p>
                 </div>
               </div>
-              <div className="flex justify-center mt-10 animate-bounce cursor-pointer hover:scale-110 transition-transform" onClick={() => scrollToSection("project-section")}>
-              <div className="w-[50px] h-[50px] flex items-center justify-center">
-                <svg viewBox="-19.04 0 75.804 75.804" xmlns="http://www.w3.org/2000/svg" fill="#000000" transform="rotate(90)">
-                  <g id="SVGRepo_iconCarrier">
-                    <g id="Group_65" data-name="Group 65" transform="translate(-831.568 -384.448)">
-                      <path id="Path_57" data-name="Path 57" d="M833.068,460.252a1.5,1.5,0,0,1-1.061-2.561l33.557-33.56a2.53,2.53,0,0,0,0-3.564l-33.557-33.558a1.5,1.5,0,0,1,2.122-2.121l33.556,33.558a5.53,5.53,0,0,1,0,7.807l-33.557,33.56A1.5,1.5,0,0,1,833.068,460.252Z" fill="#6e6e6e"></path>
-                    </g>
-                  </g>
-                </svg>
+              <div className="flex justify-center items-center h-screen">
+                <div className="w-[700px] text-center font-semibold">
+                  Hi! I’m a student in Digital Business Technology.<br />I’ve been passionate about technology and computers since I was six years old<br />It’s always felt like magic to me. I love exploring how things work behind the screen<br />and I truly believe that programming has the power to change the world for the better.<br />My goal is to use technology to create innovative solutions that make people’s lives easier<br />and more meaningful.
+                </div>
               </div>
-            </div>
+              <div className="flex justify-center mt-10 animate-bounce cursor-pointer hover:scale-110 transition-transform" onClick={() => scrollToSection("project-section")}>
+                <div className="w-[50px] h-[50px] flex items-center justify-center">
+                  <svg viewBox="-19.04 0 75.804 75.804" xmlns="http://www.w3.org/2000/svg" fill="#000000" transform="rotate(90)">
+                    <g id="SVGRepo_iconCarrier">
+                      <g id="Group_65" data-name="Group 65" transform="translate(-831.568 -384.448)">
+                        <path id="Path_57" data-name="Path 57" d="M833.068,460.252a1.5,1.5,0,0,1-1.061-2.561l33.557-33.56a2.53,2.53,0,0,0,0-3.564l-33.557-33.558a1.5,1.5,0,0,1,2.122-2.121l33.556,33.558a5.53,5.53,0,0,1,0,7.807l-33.557,33.56A1.5,1.5,0,0,1,833.068,460.252Z" fill="#6e6e6e"></path>
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Project Section */}
           <div id="project-section" className="min-h-screen flex flex-col justify-center items-center bg-gradient-to-b from-white to-gray-50 px-8">
             <div className="max-w-6xl w-full">
               <h2 className="text-5xl font-bold mb-12 mt-20 text-center">Projects</h2>
@@ -200,7 +200,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Contact Section */}
           <div id="contact-section" className="min-h-screen flex flex-col justify-center items-center bg-white px-8">
             <h2 className="text-4xl font-bold mb-8">Contact Me</h2>
             <div className="flex flex-wrap justify-center gap-6">
@@ -220,6 +219,9 @@ export default function Home() {
           </div>
         </>
       )}
+      <footer className="select-none w-full bg-gray-100 text-gray-600 py-4 text-center mt-10">
+        © 2022 Puxpui, All rights reserved.
+      </footer>
     </div>
   );
 }
