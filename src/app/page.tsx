@@ -147,7 +147,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex justify-center items-center h-screen">
-                <div className="w-[700px] text-center font-semibold">
+                <div className="w-[700px] text-center font-medium">
                   Hi! I’m a student in Digital Business Technology.<br />I’ve been passionate about technology and computers since I was six years old<br />It’s always felt like magic to me. I love exploring how things work behind the screen<br />and I truly believe that programming has the power to change the world for the better.<br />My goal is to use technology to create innovative solutions that make people’s lives easier<br />and more meaningful.
                 </div>
               </div>

@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+body {
+  font-family: var(--font-kanit), sans-serif;
+}
+
 .nav-hover {
   @apply relative cursor-pointer py-2 px-3 transition-colors duration-200;
 }

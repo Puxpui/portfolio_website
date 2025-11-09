@@ -1,16 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Kanit } from "next/font/google";
 import "./globals.css";
 import Navbar from "./navbar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const kanit = Kanit({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: [
+    "100","200","300","400","500","600","700","800","900"
+  ],
+  variable: "--font-kanit",
 });
 
 export const metadata: Metadata = {
@@ -23,12 +21,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${kanit.variable} antialiased`}>
         {children}
       </body>
     </html>
