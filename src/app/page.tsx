@@ -72,6 +72,7 @@ export default function Home() {
               <button onClick={() => scrollToSection("hero-section")} className="nav-hover text-black hover:text-violet-600 transition">Home</button>
               <button onClick={() => scrollToSection("about-section")} className="nav-hover text-black hover:text-violet-600 transition">About Me</button>
               <button onClick={() => scrollToSection("project-section")} className="nav-hover text-black hover:text-violet-600 transition">Project</button>
+              <button onClick={() => scrollToSection("certificate-section")} className="nav-hover text-black hover:text-violet-600 transition">Certificate</button>
               <button onClick={() => scrollToSection("contact-section")} className="nav-hover text-black hover:text-violet-600 transition">Contact</button>
             </div>
           )}
@@ -83,15 +84,15 @@ export default function Home() {
           <div className="animate-bounce text-[100px] cursor-pointer hover:scale-110 transition-transform" onClick={() => setIsClicked(true)}>🌏</div>
         ) : (
           <div className="flex flex-col items-center justify-center space-y-6 text-center">
-            <div className="text-4xl">Welcome to My Portfolio</div>
-            <div className="text-2xl">Game & Software Developer</div>
-            <div className="flex gap-4 text-2xl justify-center">
+            <div className="animate-fade-in text-4xl">Welcome to My Portfolio</div>
+            <div className="animate-fade-in text-2xl">Game & Software Developer</div>
+            <div className="animate-fade-in flex gap-4 text-2xl justify-center">
               <div>💻</div>
               <div>🎨</div>
               <div>🚀</div>
             </div>
             <div className="flex justify-center mt-10 animate-bounce cursor-pointer hover:scale-110 transition-transform" onClick={() => scrollToSection("about-section")}>
-              <div className="w-[50px] h-[50px] flex items-center justify-center">
+              <div className="animate-fade-in w-[50px] h-[50px] flex items-center justify-center">
                 <svg viewBox="-19.04 0 75.804 75.804" xmlns="http://www.w3.org/2000/svg" fill="#000000" transform="rotate(90)">
                   <g id="SVGRepo_iconCarrier">
                     <g id="Group_65" data-name="Group 65" transform="translate(-831.568 -384.448)">
@@ -200,6 +201,58 @@ export default function Home() {
             </div>
           </div>
 
+          <div id="certificate-section" className="pt-[100px] min-h-screen flex flex-col justify-center items-center bg-white px-8">
+            <h2 className="text-4xl font-bold mb-8">Certificate</h2>
+            <div className="flex flex-wrap justify-center gap-6">
+
+              <div className="bg-white text-white rounded-2xl shadow-lg w-100 flex flex-col items-center">
+                <img className="" src="https://i.ibb.co/j9Z5Rwxb/cu1-page-0002.jpg" alt="" />
+                <p className="pt-4 text-black text-center p-2 mb-6">Unlocking the Power of AI with Python Programming for Beginners<br />จุฬาลงกรณ์มหาวิทยาลัย</p>
+              </div>
+
+              <div className="bg-white text-white rounded-2xl shadow-lg w-100 flex flex-col items-center">
+                <img className="" src="https://i.ibb.co/fGprfgH1/0a9bd651-a4ac-41b5-af2a-199775e14b0c-page-0002.jpg" alt="" />
+                <p className="pt-4 text-black text-center p-2 mb-6">Cyber Crime<br />จุฬาลงกรณ์มหาวิทยาลัย</p>
+              </div>
+
+              <div className="bg-white text-white rounded-2xl shadow-lg w-100 flex flex-col items-center">
+                <img className="" src="https://i.ibb.co/nM6LktXD/certificate-74554-1151043-1151043-17626804869178.jpg" alt="" />
+                <p className="pt-4 text-black text-center p-2 mb-6">Cloud Computing for Everyone<br />จุฬาลงกรณ์มหาวิทยาลัย</p>
+              </div>
+
+              <div className="bg-white text-white rounded-2xl shadow-lg w-100 flex flex-col items-center">
+                <img className="" src="https://i.ibb.co/8n09ZXJ0/cmu-page-0002.jpg" alt="" />
+                <p className="pt-4 text-black text-center p-2 mb-6">Network Literacy<br />มหาวิทยาลัยเชียงใหม่</p>
+              </div>
+
+              <div className="bg-white text-white rounded-2xl shadow-lg w-100 flex flex-col items-center">
+                <img className="" src="https://i.ibb.co/Rp23LHBs/1ed01693-7b16-4d6f-8c03-9bba4c5aba3f-page-0002.jpg" alt="" />
+                <p className="pt-4 text-black text-center p-2 mb-6">Coding for All - Thinking smart toward the digital age<br />สถาบันส่งเสริมการสอนวิทยาศาสตร์และเทคโนโลยี</p>
+              </div>
+
+              <div className="bg-white text-white rounded-2xl shadow-lg w-100 flex flex-col items-center">
+                <img className="" src="https://i.ibb.co/TD1PVX4P/borntodev-academy-Introduction-to-Computer-Science-certificate.png" alt="" />
+                <p className="pt-4 text-black text-center p-2 mb-6">Introduction to Computer Science<br />borntoDev</p>
+              </div>
+
+              <div className="bg-white text-white rounded-2xl shadow-lg w-100 flex flex-col items-center">
+                <img className="" src="https://i.ibb.co/hR4KsdTw/borntodev-academy-Introduction-to-Java-Script-certificate.png" alt="" />
+                <p className="pt-4 text-black text-center p-2 mb-6">Introduction to JavaScript<br />borntoDev</p>
+              </div>
+
+              <div className="bg-white text-white rounded-2xl shadow-lg w-100 flex flex-col items-center">
+                <img className="" src="https://i.ibb.co/Y7h8cggB/borntodev-academy-Git-Hub-for-Developer-certificate.png" alt="" />
+                <p className="pt-4 text-black text-center p-2 mb-6">GitHub for Developer<br />borntoDev</p>
+              </div>
+
+              <div className="bg-white text-white rounded-2xl shadow-lg w-100 flex flex-col items-center">
+                <img className="" src="https://i.ibb.co/v4Z1g4ZT/borntodev-academy-Command-Prompt-101-certificate.png" alt="" />
+                <p className="pt-4 text-black text-center p-2 mb-6">Command Prompt 101<br />borntoDev</p>
+              </div>
+
+            </div>
+          </div>
+
           <div id="contact-section" className="min-h-screen flex flex-col justify-center items-center bg-white px-8">
             <h2 className="text-4xl font-bold mb-8">Contact Me</h2>
             <div className="flex flex-wrap justify-center gap-6">
@@ -217,6 +270,8 @@ export default function Home() {
               </a>
             </div>
           </div>
+
+
         </>
       )}
       <footer className="select-none w-full bg-gray-100 text-gray-600 py-4 text-center mt-10">
