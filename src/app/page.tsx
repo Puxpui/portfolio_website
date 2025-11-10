@@ -19,7 +19,7 @@ const projects = [
     id: 3,
     title: "พัฒนา Bot Discord โดย Discord.JS (Node.Js)",
     description: "Chat Bot ที่ใช้ AI ของ Open AI (ChatGPT)",
-    image: "https://i9.ytimg.com/vi/Bvsw8ePqwwo/maxresdefault.jpg?time=1762706400000&sqp=COCHw8gG&rs=AOn4CLAMSa3vhWaT80nQgGzhVfVFzXSrrw",
+    image: "https://i.ibb.co/SwwGZtmc/maxresdefault.webp",
     githubLink: "https://github.com/Puxpui/DiscordBotWithChatGPT",
     youtubeLink: "https://youtu.be/Bvsw8ePqwwo",
   },
@@ -54,9 +54,67 @@ const projects = [
   },
 ];
 
+const certificates = [
+  {
+    id: 1,
+    image: "https://i.ibb.co/j9Z5Rwxb/cu1-page-0002.jpg",
+    title: "Unlocking the Power of AI with Python Programming for Beginners",
+    institution: "จุฬาลงกรณ์มหาวิทยาลัย"
+  },
+  {
+    id: 2,
+    image: "https://i.ibb.co/fGprfgH1/0a9bd651-a4ac-41b5-af2a-199775e14b0c-page-0002.jpg",
+    title: "Cyber Crime",
+    institution: "จุฬาลงกรณ์มหาวิทยาลัย"
+  },
+  {
+    id: 3,
+    image: "https://i.ibb.co/nM6LktXD/certificate-74554-1151043-1151043-17626804869178.jpg",
+    title: "Cloud Computing for Everyone",
+    institution: "จุฬาลงกรณ์มหาวิทยาลัย"
+  },
+  {
+    id: 4,
+    image: "https://i.ibb.co/8n09ZXJ0/cmu-page-0002.jpg",
+    title: "Network Literacy",
+    institution: "มหาวิทยาลัยเชียงใหม่"
+  },
+  {
+    id: 5,
+    image: "https://i.ibb.co/Rp23LHBs/1ed01693-7b16-4d6f-8c03-9bba4c5aba3f-page-0002.jpg",
+    title: "Coding for All - Thinking smart toward the digital age",
+    institution: "สถาบันส่งเสริมการสอนวิทยาศาสตร์และเทคโนโลยี"
+  },
+  {
+    id: 6,
+    image: "https://i.ibb.co/TD1PVX4P/borntodev-academy-Introduction-to-Computer-Science-certificate.png",
+    title: "Introduction to Computer Science",
+    institution: "borntoDev"
+  },
+  {
+    id: 7,
+    image: "https://i.ibb.co/hR4KsdTw/borntodev-academy-Introduction-to-Java-Script-certificate.png",
+    title: "Introduction to JavaScript",
+    institution: "borntoDev"
+  },
+  {
+    id: 8,
+    image: "https://i.ibb.co/Y7h8cggB/borntodev-academy-Git-Hub-for-Developer-certificate.png",
+    title: "GitHub for Developer",
+    institution: "borntoDev"
+  },
+  {
+    id: 9,
+    image: "https://i.ibb.co/v4Z1g4ZT/borntodev-academy-Command-Prompt-101-certificate.png",
+    title: "Command Prompt 101",
+    institution: "borntoDev"
+  }
+];
+
 export default function Home() {
   const [isClicked, setIsClicked] = useState(false);
   const [openModalId, setOpenModalId] = useState<number | null>(null);
+  const [lightboxImage, setLightboxImage] = useState<string | null>(null);
 
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -149,7 +207,7 @@ export default function Home() {
               </div>
               <div className="flex justify-center items-center h-screen">
                 <div className="w-[700px] text-center font-medium">
-                  Hi! I’m a student in Digital Business Technology.<br />I’ve been passionate about technology and computers since I was six years old<br />It’s always felt like magic to me. I love exploring how things work behind the screen<br />and I truly believe that programming has the power to change the world for the better.<br />My goal is to use technology to create innovative solutions that make people’s lives easier<br />and more meaningful.
+                  Hi! I'm a student in Digital Business Technology.<br />I've been passionate about technology and computers since I was six years old<br />It's always felt like magic to me. I love exploring how things work behind the screen<br />and I truly believe that programming has the power to change the world for the better.<br />My goal is to use technology to create innovative solutions that make people's lives easier<br />and more meaningful.
                 </div>
               </div>
               <div className="flex justify-center mt-10 animate-bounce cursor-pointer hover:scale-110 transition-transform" onClick={() => scrollToSection("project-section")}>
@@ -173,7 +231,12 @@ export default function Home() {
                 {projects.map((project) => (
                   <div key={project.id} className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow flex flex-col">
                     <div className="p-8 flex-grow">
-                      <img className="w-full h-[250px] mb-4 object-cover rounded" src={project.image} alt={project.title} />
+                      <img
+                        className="w-full h-[250px] mb-4 object-cover rounded cursor-pointer hover:opacity-90 transition-opacity"
+                        src={project.image}
+                        alt={project.title}
+                        onClick={() => setLightboxImage(project.image)}
+                      />
                       <h3 className="text-2xl font-semibold mb-3">{project.title}</h3>
                       <p className="text-gray-600">{project.description}</p>
                     </div>
@@ -184,7 +247,15 @@ export default function Home() {
                       <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50 p-4" onClick={() => setOpenModalId(null)}>
                         <div className="bg-white p-6 rounded-xl max-w-2xl w-full shadow-lg relative max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
                           <button className="absolute top-4 right-4 text-gray-600 hover:text-black text-2xl w-8 h-8 flex items-center justify-center" onClick={() => setOpenModalId(null)}>✖</button>
-                          <img className="w-full h-[300px] object-cover rounded-lg mb-4" src={project.image} alt={project.title} />
+                          <img
+                            className="w-full h-[300px] object-cover rounded-lg mb-4 cursor-pointer hover:opacity-90 transition-opacity"
+                            src={project.image}
+                            alt={project.title}
+                            onClick={() => {
+                              setLightboxImage(project.image);
+                              setOpenModalId(null);
+                            }}
+                          />
                           <h2 className="text-2xl font-bold mb-4">{project.title}</h2>
                           <p className="text-gray-700 leading-relaxed mb-4">{project.description}</p>
                           <div className="flex flex-wrap gap-2">
@@ -204,52 +275,12 @@ export default function Home() {
           <div id="certificate-section" className="pt-[100px] min-h-screen flex flex-col justify-center items-center bg-white px-8">
             <h2 className="text-4xl font-bold mb-8">Certificate</h2>
             <div className="flex flex-wrap justify-center gap-6">
-
-              <div className="bg-white text-white rounded-2xl shadow-lg w-100 flex flex-col items-center">
-                <img className="" src="https://i.ibb.co/j9Z5Rwxb/cu1-page-0002.jpg" alt="" />
-                <p className="pt-4 text-black text-center p-2 mb-6">Unlocking the Power of AI with Python Programming for Beginners<br />จุฬาลงกรณ์มหาวิทยาลัย</p>
-              </div>
-
-              <div className="bg-white text-white rounded-2xl shadow-lg w-100 flex flex-col items-center">
-                <img className="" src="https://i.ibb.co/fGprfgH1/0a9bd651-a4ac-41b5-af2a-199775e14b0c-page-0002.jpg" alt="" />
-                <p className="pt-4 text-black text-center p-2 mb-6">Cyber Crime<br />จุฬาลงกรณ์มหาวิทยาลัย</p>
-              </div>
-
-              <div className="bg-white text-white rounded-2xl shadow-lg w-100 flex flex-col items-center">
-                <img className="" src="https://i.ibb.co/nM6LktXD/certificate-74554-1151043-1151043-17626804869178.jpg" alt="" />
-                <p className="pt-4 text-black text-center p-2 mb-6">Cloud Computing for Everyone<br />จุฬาลงกรณ์มหาวิทยาลัย</p>
-              </div>
-
-              <div className="bg-white text-white rounded-2xl shadow-lg w-100 flex flex-col items-center">
-                <img className="" src="https://i.ibb.co/8n09ZXJ0/cmu-page-0002.jpg" alt="" />
-                <p className="pt-4 text-black text-center p-2 mb-6">Network Literacy<br />มหาวิทยาลัยเชียงใหม่</p>
-              </div>
-
-              <div className="bg-white text-white rounded-2xl shadow-lg w-100 flex flex-col items-center">
-                <img className="" src="https://i.ibb.co/Rp23LHBs/1ed01693-7b16-4d6f-8c03-9bba4c5aba3f-page-0002.jpg" alt="" />
-                <p className="pt-4 text-black text-center p-2 mb-6">Coding for All - Thinking smart toward the digital age<br />สถาบันส่งเสริมการสอนวิทยาศาสตร์และเทคโนโลยี</p>
-              </div>
-
-              <div className="bg-white text-white rounded-2xl shadow-lg w-100 flex flex-col items-center">
-                <img className="" src="https://i.ibb.co/TD1PVX4P/borntodev-academy-Introduction-to-Computer-Science-certificate.png" alt="" />
-                <p className="pt-4 text-black text-center p-2 mb-6">Introduction to Computer Science<br />borntoDev</p>
-              </div>
-
-              <div className="bg-white text-white rounded-2xl shadow-lg w-100 flex flex-col items-center">
-                <img className="" src="https://i.ibb.co/hR4KsdTw/borntodev-academy-Introduction-to-Java-Script-certificate.png" alt="" />
-                <p className="pt-4 text-black text-center p-2 mb-6">Introduction to JavaScript<br />borntoDev</p>
-              </div>
-
-              <div className="bg-white text-white rounded-2xl shadow-lg w-100 flex flex-col items-center">
-                <img className="" src="https://i.ibb.co/Y7h8cggB/borntodev-academy-Git-Hub-for-Developer-certificate.png" alt="" />
-                <p className="pt-4 text-black text-center p-2 mb-6">GitHub for Developer<br />borntoDev</p>
-              </div>
-
-              <div className="bg-white text-white rounded-2xl shadow-lg w-100 flex flex-col items-center">
-                <img className="" src="https://i.ibb.co/v4Z1g4ZT/borntodev-academy-Command-Prompt-101-certificate.png" alt="" />
-                <p className="pt-4 text-black text-center p-2 mb-6">Command Prompt 101<br />borntoDev</p>
-              </div>
-
+              {certificates.map((cert) => (
+                <div key={cert.id} className="bg-white text-white rounded-2xl shadow-lg w-100 flex flex-col items-center">
+                  <img className="cursor-pointer hover:opacity-90 transition-opacity rounded-t-2xl" src={cert.image} alt={cert.title} onClick={() => setLightboxImage(cert.image)}/>
+                  <p className="pt-4 text-black text-center p-2 mb-6">{cert.title}<br />{cert.institution}</p>
+                </div>
+              ))}
             </div>
           </div>
 
@@ -270,10 +301,18 @@ export default function Home() {
               </a>
             </div>
           </div>
-
-
         </>
       )}
+
+      {lightboxImage && (
+        <div className="fixed inset-0 bg-black/95 z-[100] flex items-center justify-center p-4 cursor-zoom-out" onClick={() => setLightboxImage(null)}>
+          <button className="absolute top-4 right-4 text-white hover:text-gray-300 text-4xl w-12 h-12 flex items-center justify-center z-10" onClick={() => setLightboxImage(null)}>
+            ✖
+          </button>
+          <img src={lightboxImage} alt="Lightbox view" className="max-w-full max-h-[90vh] object-contain cursor-default" onClick={(e) => e.stopPropagation()}/>
+        </div>
+      )}
+
       <footer className="select-none w-full bg-gray-100 text-gray-600 py-4 text-center mt-10">
         © 2022 Puxpui, All rights reserved.
       </footer>
