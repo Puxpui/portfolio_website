@@ -69,44 +69,44 @@ const certificates = [
   },
   {
     id: 3,
-    image: "https://i.ibb.co/nM6LktXD/certificate-74554-1151043-1151043-17626804869178.jpg",
-    title: "Cloud Computing for Everyone",
-    institution: "จุฬาลงกรณ์มหาวิทยาลัย"
-  },
-  {
-    id: 4,
     image: "https://i.ibb.co/8n09ZXJ0/cmu-page-0002.jpg",
     title: "Network Literacy",
     institution: "มหาวิทยาลัยเชียงใหม่"
   },
   {
-    id: 5,
+    id: 4,
     image: "https://i.ibb.co/Rp23LHBs/1ed01693-7b16-4d6f-8c03-9bba4c5aba3f-page-0002.jpg",
     title: "Coding for All - Thinking smart toward the digital age",
     institution: "สถาบันส่งเสริมการสอนวิทยาศาสตร์และเทคโนโลยี"
   },
   {
-    id: 6,
+    id: 5,
     image: "https://i.ibb.co/ksYXWxSv/certificate-51609-1151043-1151043-17627609613488.jpg",
     title: "Cybersecurity Awareness for Everyone",
     institution: "จุฬาลงกรณ์มหาวิทยาลัย"
   },
   {
-    id: 7,
+    id: 6,
     image: "https://i.ibb.co/kp56xvZ/certificate-70775-1151043-1151043-17627601734558.jpg",
     title: "Foundational Knowledge of AI and ML",
     institution: "จุฬาลงกรณ์มหาวิทยาลัย"
   },
   {
-    id: 8,
+    id: 7,
     image: "https://i.ibb.co/x8s7k1Vj/certificate-51604-1151043-1151043-17627571041516.jpg",
     title: "Knowing Computers and Digital Systems",
     institution: "จุฬาลงกรณ์มหาวิทยาลัย"
   },
   {
-    id: 9,
+    id: 8,
     image: "https://i.ibb.co/MDysssFb/certificate-74340-1151043-1151043-17627584845055.jpg",
     title: "AI Governance and Regulation",
+    institution: "จุฬาลงกรณ์มหาวิทยาลัย"
+  },
+  {
+    id: 9,
+    image: "https://i.ibb.co/nM6LktXD/certificate-74554-1151043-1151043-17626804869178.jpg",
+    title: "Cloud Computing for Everyone",
     institution: "จุฬาลงกรณ์มหาวิทยาลัย"
   },
   {
