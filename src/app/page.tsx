@@ -138,6 +138,12 @@ const certificates = [
     image: "https://i.ibb.co/v4Z1g4ZT/borntodev-academy-Command-Prompt-101-certificate.png",
     title: "Command Prompt 101",
     institution: "borntoDev"
+  },
+  {
+    id: 15,
+    image: "https://i.ibb.co/357mjT49/certificate-1.png",
+    title: "DevLab 3 Open Access Program with rank of 1696 from total participation of 30020",
+    institution: "borntoDev"
   }
 ];
 
