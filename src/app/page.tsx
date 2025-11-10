@@ -87,24 +87,54 @@ const certificates = [
   },
   {
     id: 6,
+    image: "https://i.ibb.co/ksYXWxSv/certificate-51609-1151043-1151043-17627609613488.jpg",
+    title: "Cybersecurity Awareness for Everyone",
+    institution: "จุฬาลงกรณ์มหาวิทยาลัย"
+  },
+  {
+    id: 7,
+    image: "https://i.ibb.co/kp56xvZ/certificate-70775-1151043-1151043-17627601734558.jpg",
+    title: "Foundational Knowledge of AI and ML",
+    institution: "จุฬาลงกรณ์มหาวิทยาลัย"
+  },
+  {
+    id: 8,
+    image: "https://i.ibb.co/x8s7k1Vj/certificate-51604-1151043-1151043-17627571041516.jpg",
+    title: "Knowing Computers and Digital Systems",
+    institution: "จุฬาลงกรณ์มหาวิทยาลัย"
+  },
+  {
+    id: 9,
+    image: "https://i.ibb.co/MDysssFb/certificate-74340-1151043-1151043-17627584845055.jpg",
+    title: "AI Governance and Regulation",
+    institution: "จุฬาลงกรณ์มหาวิทยาลัย"
+  },
+  {
+    id: 10,
+    image: "https://i.ibb.co/b5g44xfL/certificate-73663-1151043-1151043-17627620125564.jpg",
+    title: "Introduction to Neural Network",
+    institution: "จุฬาลงกรณ์มหาวิทยาลัย"
+  },
+  {
+    id: 11,
     image: "https://i.ibb.co/TD1PVX4P/borntodev-academy-Introduction-to-Computer-Science-certificate.png",
     title: "Introduction to Computer Science",
     institution: "borntoDev"
   },
   {
-    id: 7,
+    id: 12,
     image: "https://i.ibb.co/hR4KsdTw/borntodev-academy-Introduction-to-Java-Script-certificate.png",
     title: "Introduction to JavaScript",
     institution: "borntoDev"
   },
   {
-    id: 8,
+    id: 13,
     image: "https://i.ibb.co/Y7h8cggB/borntodev-academy-Git-Hub-for-Developer-certificate.png",
     title: "GitHub for Developer",
     institution: "borntoDev"
   },
   {
-    id: 9,
+    id: 14,
     image: "https://i.ibb.co/v4Z1g4ZT/borntodev-academy-Command-Prompt-101-certificate.png",
     title: "Command Prompt 101",
     institution: "borntoDev"
