@@ -16,7 +16,7 @@ body {
 }
 
 .button-class {
-  @apply cursor-pointer hover:bg-linear-to-bl from-violet-500 to-fuchsia-500 transition active:scale-110 text-white rounded-full font-medium px-4 text-[20px] bg-[#bc77fc]
+  @apply cursor-pointer hover:bg-linear-to-bl from-violet-500 to-fuchsia-500 transition active:scale-110 text-white rounded-lg font-medium text-[20px] bg-[#bc77fc]
 }
 
 @keyframes fade-in {
@@ -48,4 +48,19 @@ body {
 
 .delay-200 {
   animation-delay: 200ms;
+}
+
+@keyframes scroll-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-scroll-fade-up {
+  animation: scroll-fade-up 0.8s ease-out forwards;
 }

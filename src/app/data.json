@@ -1,0 +1,146 @@
+{
+  "projects": [
+  {
+    "id": 1,
+    "title": "โครงการจบ ปวส.2: เกม 3D",
+    "description": "แนว Adventure สร้างใน Unity โดยใช้ภาษา C# ออกแบบโมเดล 3D เองด้วย Blender (กำลังพัฒนา)",
+    "image": "https://i.ibb.co/spQgjgVz/image-2025-11-09-233528588.png"
+  },
+  {
+    "id": 2,
+    "title": "โครงการจบ ปวช.3: เกม 2D",
+    "description": "แนวยิงศัตรูและผ่านด่าน สร้างใน Unity โดยใช้ภาษา C#",
+    "image": "https://i.ibb.co/Vc9YNBxQ/image-2025-11-09-233900555.png",
+    "googleSiteLink": "https://sites.google.com/view/hackingbankgame"
+  },
+  {
+    "id": 3,
+    "title": "พัฒนา Bot Discord โดย Discord.JS (Node.Js)",
+    "description": "Chat Bot ที่ใช้ AI ของ Open AI (ChatGPT)",
+    "image": "https://i.ibb.co/SwwGZtmc/maxresdefault.webp",
+    "githubLink": "https://github.com/Puxpui/DiscordBotWithChatGPT",
+    "youtubeLink": "https://youtu.be/Bvsw8ePqwwo"
+  },
+  {
+    "id": 4,
+    "title": "พัฒนาเว็บไซต์ E-Commerce",
+    "description": "Front-End และระบบ Login ด้วย React (Next.js), MongoDB",
+    "image": "https://i.ibb.co/fGMVdH9q/image-2025-11-09-235655639.png",
+    "githubLink": "https://github.com/Puxpui/eclipse-store"
+  },
+  {
+    "id": 5,
+    "title": "พัฒนาเว็บไซต์รวม 'หนึ่งตำบล หนึ่งผลิตภัณฑ์'  (OTOP)",
+    "description": "สำหรับการทดสอบมาตรฐานวิชาชีพ (โดย Google Site)",
+    "image": "https://i.ibb.co/5hXqh5M5/image-2025-11-09-235944391.png",
+    "googleSiteLink": "https://sites.google.com/view/otopsiteby-mongkon"
+  },
+  {
+    "id": 6,
+    "title": "พัฒนามอดสำหรับเกม Minecraft",
+    "description": "พัฒนาโดยภาษา Java เป็นการเขียนโปรแกรมภาษา Java ครั้งแรก ซึ่งเป็นงานเล็ก ๆ",
+    "image": "https://i.ibb.co/RkszVHF8/image-2025-11-10-000136870.png",
+    "githubLink": "https://github.com/Puxpui/Minecraft-Mod-MineTime-for-1.19.2"
+  },
+  {
+    "id": 7,
+    "title": "พัฒนาเว็บไซต์คำนวนค่าต่าง ๆ ในชีวิตประจำวัน",
+    "description": "พัฒนาด้วย HTML/CSS พื้นฐาน และ JavaScript เป็น Project ในคอร์สเรียนของ borntoDev ทำให้ได้เรียนรู้การทำงานหลาย ๆ อย่างในพื้นฐานของภาษานี้",
+    "image": "https://i.ibb.co/jvTmkNjb/image-2025-11-10-000504553.png",
+    "githubLink": "https://github.com/Puxpui/all-you-can-cal",
+    "youtubeLink": "https://youtu.be/CVqjbkoZXUo"
+  }
+  ],
+  "certificates": [
+    {
+    "id": 1,
+    "image": "https://i.ibb.co/j9Z5Rwxb/cu1-page-0002.jpg",
+    "title": "Unlocking the Power of AI with Python Programming for Beginners",
+    "institution": "จุฬาลงกรณ์มหาวิทยาลัย"
+  },
+  {
+    "id": 2,
+    "image": "https://i.ibb.co/fGprfgH1/0a9bd651-a4ac-41b5-af2a-199775e14b0c-page-0002.jpg",
+    "title": "Cyber Crime",
+    "institution": "จุฬาลงกรณ์มหาวิทยาลัย"
+  },
+  {
+    "id": 3,
+    "image": "https://i.ibb.co/8n09ZXJ0/cmu-page-0002.jpg",
+    "title": "Network Literacy",
+    "institution": "มหาวิทยาลัยเชียงใหม่"
+  },
+  {
+    "id": 4,
+    "image": "https://i.ibb.co/Rp23LHBs/1ed01693-7b16-4d6f-8c03-9bba4c5aba3f-page-0002.jpg",
+    "title": "Coding for All - Thinking smart toward the digital age",
+    "institution": "สถาบันส่งเสริมการสอนวิทยาศาสตร์และเทคโนโลยี"
+  },
+  {
+    "id": 5,
+    "image": "https://i.ibb.co/ksYXWxSv/certificate-51609-1151043-1151043-17627609613488.jpg",
+    "title": "Cybersecurity Awareness for Everyone",
+    "institution": "จุฬาลงกรณ์มหาวิทยาลัย"
+  },
+  {
+    "id": 6,
+    "image": "https://i.ibb.co/kp56xvZ/certificate-70775-1151043-1151043-17627601734558.jpg",
+    "title": "Foundational Knowledge of AI and ML",
+    "institution": "จุฬาลงกรณ์มหาวิทยาลัย"
+  },
+  {
+    "id": 7,
+    "image": "https://i.ibb.co/x8s7k1Vj/certificate-51604-1151043-1151043-17627571041516.jpg",
+    "title": "Knowing Computers and Digital Systems",
+    "institution": "จุฬาลงกรณ์มหาวิทยาลัย"
+  },
+  {
+    "id": 8,
+    "image": "https://i.ibb.co/MDysssFb/certificate-74340-1151043-1151043-17627584845055.jpg",
+    "title": "AI Governance and Regulation",
+    "institution": "จุฬาลงกรณ์มหาวิทยาลัย"
+  },
+  {
+    "id": 9,
+    "image": "https://i.ibb.co/nM6LktXD/certificate-74554-1151043-1151043-17626804869178.jpg",
+    "title": "Cloud Computing for Everyone",
+    "institution": "จุฬาลงกรณ์มหาวิทยาลัย"
+  },
+  {
+    "id": 10,
+    "image": "https://i.ibb.co/b5g44xfL/certificate-73663-1151043-1151043-17627620125564.jpg",
+    "title": "Introduction to Neural Network",
+    "institution": "จุฬาลงกรณ์มหาวิทยาลัย"
+  },
+  {
+    "id": 11,
+    "image": "https://i.ibb.co/TD1PVX4P/borntodev-academy-Introduction-to-Computer-Science-certificate.png",
+    "title": "Introduction to Computer Science",
+    "institution": "borntoDev"
+  },
+  {
+    "id": 12,
+    "image": "https://i.ibb.co/hR4KsdTw/borntodev-academy-Introduction-to-Java-Script-certificate.png",
+    "title": "Introduction to JavaScript",
+    "institution": "borntoDev"
+  },
+  {
+    "id": 13,
+    "image": "https://i.ibb.co/Y7h8cggB/borntodev-academy-Git-Hub-for-Developer-certificate.png",
+    "title": "GitHub for Developer",
+    "institution": "borntoDev"
+  },
+  {
+    "id": 14,
+    "image": "https://i.ibb.co/v4Z1g4ZT/borntodev-academy-Command-Prompt-101-certificate.png",
+    "title": "Command Prompt 101",
+    "institution": "borntoDev"
+  },
+  {
+    "id": 15,
+    "image": "https://i.ibb.co/357mjT49/certificate-1.png",
+    "title": "DevLab 3 Open Access Program with rank of 1696 from total participation of 30020",
+    "institution": "borntoDev"
+  }
+  ]
+}

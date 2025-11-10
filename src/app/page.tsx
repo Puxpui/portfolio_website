@@ -1,160 +1,34 @@
 "use client";
-import { useState } from "react";
-
-const projects = [
-  {
-    id: 1,
-    title: "โครงการจบ ปวส.2: เกม 3D",
-    description: "แนว Adventure สร้างใน Unity โดยใช้ภาษา C# ออกแบบโมเดล 3D เองด้วย Blender (กำลังพัฒนา)",
-    image: "https://i.ibb.co/spQgjgVz/image-2025-11-09-233528588.png",
-  },
-  {
-    id: 2,
-    title: "โครงการจบ ปวช.3: เกม 2D",
-    description: "แนวยิงศัตรูและผ่านด่าน สร้างใน Unity โดยใช้ภาษา C#",
-    image: "https://i.ibb.co/Vc9YNBxQ/image-2025-11-09-233900555.png",
-    googleSiteLink: "https://sites.google.com/view/hackingbankgame",
-  },
-  {
-    id: 3,
-    title: "พัฒนา Bot Discord โดย Discord.JS (Node.Js)",
-    description: "Chat Bot ที่ใช้ AI ของ Open AI (ChatGPT)",
-    image: "https://i.ibb.co/SwwGZtmc/maxresdefault.webp",
-    githubLink: "https://github.com/Puxpui/DiscordBotWithChatGPT",
-    youtubeLink: "https://youtu.be/Bvsw8ePqwwo",
-  },
-  {
-    id: 4,
-    title: "พัฒนาเว็บไซต์ E-Commerce",
-    description: "Front-End และระบบ Login ด้วย React (Next.js), MongoDB",
-    image: "https://i.ibb.co/fGMVdH9q/image-2025-11-09-235655639.png",
-    githubLink: "https://github.com/Puxpui/eclipse-store",
-  },
-  {
-    id: 5,
-    title: "พัฒนาเว็บไซต์รวม 'หนึ่งตำบล หนึ่งผลิตภัณฑ์'  (OTOP)",
-    description: "สำหรับการทดสอบมาตรฐานวิชาชีพ (โดย Google Site)",
-    image: "https://i.ibb.co/5hXqh5M5/image-2025-11-09-235944391.png",
-    googleSiteLink: "https://sites.google.com/view/otopsiteby-mongkon",
-  },
-  {
-    id: 6,
-    title: "พัฒนามอดสำหรับเกม Minecraft",
-    description: "พัฒนาโดยภาษา Java เป็นการเขียนโปรแกรมภาษา Java ครั้งแรก ซึ่งเป็นงานเล็ก ๆ",
-    image: "https://i.ibb.co/RkszVHF8/image-2025-11-10-000136870.png",
-    githubLink: "https://github.com/Puxpui/Minecraft-Mod-MineTime-for-1.19.2",
-  },
-  {
-    id: 7,
-    title: "พัฒนาเว็บไซต์คำนวนค่าต่าง ๆ ในชีวิตประจำวัน",
-    description: "พัฒนาด้วย HTML/CSS พื้นฐาน และ JavaScript เป็น Project ในคอร์สเรียนของ borntoDev ทำให้ได้เรียนรู้การทำงานหลาย ๆ อย่างในพื้นฐานของภาษานี้",
-    image: "https://i.ibb.co/jvTmkNjb/image-2025-11-10-000504553.png",
-    githubLink: "https://github.com/Puxpui/all-you-can-cal",
-    youtubeLink: "https://youtu.be/CVqjbkoZXUo",
-  },
-];
-
-const certificates = [
-  {
-    id: 1,
-    image: "https://i.ibb.co/j9Z5Rwxb/cu1-page-0002.jpg",
-    title: "Unlocking the Power of AI with Python Programming for Beginners",
-    institution: "จุฬาลงกรณ์มหาวิทยาลัย"
-  },
-  {
-    id: 2,
-    image: "https://i.ibb.co/fGprfgH1/0a9bd651-a4ac-41b5-af2a-199775e14b0c-page-0002.jpg",
-    title: "Cyber Crime",
-    institution: "จุฬาลงกรณ์มหาวิทยาลัย"
-  },
-  {
-    id: 3,
-    image: "https://i.ibb.co/8n09ZXJ0/cmu-page-0002.jpg",
-    title: "Network Literacy",
-    institution: "มหาวิทยาลัยเชียงใหม่"
-  },
-  {
-    id: 4,
-    image: "https://i.ibb.co/Rp23LHBs/1ed01693-7b16-4d6f-8c03-9bba4c5aba3f-page-0002.jpg",
-    title: "Coding for All - Thinking smart toward the digital age",
-    institution: "สถาบันส่งเสริมการสอนวิทยาศาสตร์และเทคโนโลยี"
-  },
-  {
-    id: 5,
-    image: "https://i.ibb.co/ksYXWxSv/certificate-51609-1151043-1151043-17627609613488.jpg",
-    title: "Cybersecurity Awareness for Everyone",
-    institution: "จุฬาลงกรณ์มหาวิทยาลัย"
-  },
-  {
-    id: 6,
-    image: "https://i.ibb.co/kp56xvZ/certificate-70775-1151043-1151043-17627601734558.jpg",
-    title: "Foundational Knowledge of AI and ML",
-    institution: "จุฬาลงกรณ์มหาวิทยาลัย"
-  },
-  {
-    id: 7,
-    image: "https://i.ibb.co/x8s7k1Vj/certificate-51604-1151043-1151043-17627571041516.jpg",
-    title: "Knowing Computers and Digital Systems",
-    institution: "จุฬาลงกรณ์มหาวิทยาลัย"
-  },
-  {
-    id: 8,
-    image: "https://i.ibb.co/MDysssFb/certificate-74340-1151043-1151043-17627584845055.jpg",
-    title: "AI Governance and Regulation",
-    institution: "จุฬาลงกรณ์มหาวิทยาลัย"
-  },
-  {
-    id: 9,
-    image: "https://i.ibb.co/nM6LktXD/certificate-74554-1151043-1151043-17626804869178.jpg",
-    title: "Cloud Computing for Everyone",
-    institution: "จุฬาลงกรณ์มหาวิทยาลัย"
-  },
-  {
-    id: 10,
-    image: "https://i.ibb.co/b5g44xfL/certificate-73663-1151043-1151043-17627620125564.jpg",
-    title: "Introduction to Neural Network",
-    institution: "จุฬาลงกรณ์มหาวิทยาลัย"
-  },
-  {
-    id: 11,
-    image: "https://i.ibb.co/TD1PVX4P/borntodev-academy-Introduction-to-Computer-Science-certificate.png",
-    title: "Introduction to Computer Science",
-    institution: "borntoDev"
-  },
-  {
-    id: 12,
-    image: "https://i.ibb.co/hR4KsdTw/borntodev-academy-Introduction-to-Java-Script-certificate.png",
-    title: "Introduction to JavaScript",
-    institution: "borntoDev"
-  },
-  {
-    id: 13,
-    image: "https://i.ibb.co/Y7h8cggB/borntodev-academy-Git-Hub-for-Developer-certificate.png",
-    title: "GitHub for Developer",
-    institution: "borntoDev"
-  },
-  {
-    id: 14,
-    image: "https://i.ibb.co/v4Z1g4ZT/borntodev-academy-Command-Prompt-101-certificate.png",
-    title: "Command Prompt 101",
-    institution: "borntoDev"
-  },
-  {
-    id: 15,
-    image: "https://i.ibb.co/357mjT49/certificate-1.png",
-    title: "DevLab 3 Open Access Program with rank of 1696 from total participation of 30020",
-    institution: "borntoDev"
-  }
-];
+import { useState, useEffect } from "react";
+import data from "./data.json";
 
 export default function Home() {
   const [isClicked, setIsClicked] = useState(false);
   const [openModalId, setOpenModalId] = useState<number | null>(null);
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
 
+  const { projects, certificates } = data;
+
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
+
+  useEffect(() => {
+    const elements = document.querySelectorAll(".scroll-fade-up");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate-scroll-fade-up");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    elements.forEach((el) => observer.observe(el));
+  }, []);
 
   return (
     <div className="w-full">
@@ -205,7 +79,7 @@ export default function Home() {
           <div id="about-section" className="flex justify-center items-center bg-gradient-to-b from-gray-50 to-white bg-opacity-95 px-8 z-50">
             <div className="w-full h-[90vh] overflow-y-auto rounded-2xl p-8 bg-clear">
               <div className="grid grid-cols-2 gap-6 mt-8 max-w-2xl mx-auto">
-                <div className="bg-white p-6 rounded-lg shadow-md">
+                <div className="scroll-fade-up bg-white p-6 rounded-lg shadow-md">
                   <p className="flex justify-end text-gray-500 text-[15px]">1 March 2006</p>
                   <div className="text-4xl mb-3">🎂</div>
                   <h3 className="font-semibold text-lg mb-2">I was born</h3>
@@ -214,13 +88,13 @@ export default function Home() {
                 </div>
                 <div></div>
                 <div></div>
-                <div className="bg-white p-6 rounded-lg shadow-md">
+                <div className="scroll-fade-up bg-white p-6 rounded-lg shadow-md">
                   <p className="flex justify-end text-gray-500 text-[15px]">2012</p>
                   <div className="text-4xl mb-3">💻</div>
                   <h3 className="font-semibold text-lg mb-2">Interested in Technology</h3>
                   <p className="text-gray-600 text-base">ผมเริ่มสนใจ Technology ตอนอายุ 6 ขวบ</p>
                 </div>
-                <div className="bg-white p-6 rounded-lg shadow-md">
+                <div className="scroll-fade-up bg-white p-6 rounded-lg shadow-md">
                   <p className="flex justify-end text-gray-500 text-[15px]">9 April 2021</p>
                   <div className="text-4xl mb-3">🎓</div>
                   <h3 className="font-semibold text-lg mb-2">Graduation</h3>
@@ -228,22 +102,23 @@ export default function Home() {
                 </div>
                 <div></div>
                 <div></div>
-                <div className="bg-white p-6 rounded-lg shadow-md">
+                <div className="scroll-fade-up bg-white p-6 rounded-lg shadow-md">
                   <p className="flex justify-end text-gray-500 text-[15px]">18 March 2024</p>
                   <div className="text-4xl mb-3">🎓</div>
                   <h3 className="font-semibold text-lg mb-2">Graduation</h3>
                   <p className="text-gray-600 text-base">สำเร็จการศึกษา<br />ระดับประกาศนียบัตรวิชาชีพ<br />สาขาคอมพิวเตอร์ธุรกิจ</p>
                 </div>
-                <div className="bg-white p-6 rounded-lg shadow-md">
+                <div className="scroll-fade-up bg-white p-6 rounded-lg shadow-md">
                   <p className="flex justify-end text-gray-500 text-[15px]">2026</p>
                   <div className="text-4xl mb-3">📖</div>
                   <h3 className="font-semibold text-lg mb-2">Studying</h3>
                   <p className="text-gray-600 text-base">กำลังศึกษา<br />ระดับประกาศนียบัตรวิชาชีพขั้นสูง<br />สาขาเทคโนโลยีธุรกิจดิจิทัล</p>
                 </div>
               </div>
-              <div className="flex justify-center items-center h-screen">
-                <div className="w-[700px] text-center font-medium">
-                  Hi! I'm a student in Digital Business Technology.<br />I've been passionate about technology and computers since I was six years old<br />It's always felt like magic to me. I love exploring how things work behind the screen<br />and I truly believe that programming has the power to change the world for the better.<br />My goal is to use technology to create innovative solutions that make people's lives easier<br />and more meaningful.
+              <div className="scroll-fade-up mt-40 max-w-2xl mx-auto">
+                <div className="bg-white p-6 rounded-lg shadow-md w-[1/2]">
+                  <h3 className="font-semibold text-lg mb-2">About Me</h3>
+                  <p className="text-gray-600 text-center text-base"> Hi! I'm a student in Digital Business Technology.<br />I've been passionate about technology and computers since I was six years old<br />It's always felt like magic to me. I love exploring how things work behind the screen<br />and I truly believe that programming has the power to change the world for the better.<br />My goal is to use technology to create innovative solutions that make people's lives easier and more meaningful.</p>
                 </div>
               </div>
               <div className="flex justify-center mt-10 animate-bounce cursor-pointer hover:scale-110 transition-transform" onClick={() => scrollToSection("project-section")}>
@@ -265,7 +140,7 @@ export default function Home() {
               <h2 className="text-5xl font-bold mb-12 mt-20 text-center">Projects</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {projects.map((project) => (
-                  <div key={project.id} className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow flex flex-col">
+                  <div key={project.id} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow flex flex-col">
                     <div className="p-8 flex-grow">
                       <img
                         className="w-full h-[250px] mb-4 object-cover rounded cursor-pointer hover:opacity-90 transition-opacity"
@@ -276,8 +151,8 @@ export default function Home() {
                       <h3 className="text-2xl font-semibold mb-3">{project.title}</h3>
                       <p className="text-gray-600">{project.description}</p>
                     </div>
-                    <div className="p-8 pt-0">
-                      <button onClick={() => setOpenModalId(project.id)} className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors w-full">View More</button>
+                    <div className="p-8 pt-0 flex justify-center">
+                      <button onClick={() => setOpenModalId(project.id)} className="button-class px-6 py-2 rounded-lg transition-colors w-[2/3]">View More</button>
                     </div>
                     {openModalId === project.id && (
                       <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50 p-4" onClick={() => setOpenModalId(null)}>
@@ -313,7 +188,7 @@ export default function Home() {
             <div className="flex flex-wrap justify-center gap-6">
               {certificates.map((cert) => (
                 <div key={cert.id} className="bg-white text-white rounded-2xl shadow-lg w-100 flex flex-col items-center">
-                  <img className="cursor-pointer hover:opacity-90 transition-opacity rounded-t-2xl" src={cert.image} alt={cert.title} onClick={() => setLightboxImage(cert.image)}/>
+                  <img className="cursor-pointer hover:opacity-90 transition-opacity rounded-t-2xl" src={cert.image} alt={cert.title} onClick={() => setLightboxImage(cert.image)} />
                   <p className="pt-4 text-black text-center p-2 mb-6">{cert.title}<br />{cert.institution}</p>
                 </div>
               ))}
@@ -345,7 +220,7 @@ export default function Home() {
           <button className="absolute top-4 right-4 text-white hover:text-gray-300 text-4xl w-12 h-12 flex items-center justify-center z-10" onClick={() => setLightboxImage(null)}>
             ✖
           </button>
-          <img src={lightboxImage} alt="Lightbox view" className="max-w-full max-h-[90vh] object-contain cursor-default" onClick={(e) => e.stopPropagation()}/>
+          <img src={lightboxImage} alt="Lightbox view" className="max-w-full max-h-[90vh] object-contain cursor-default" onClick={(e) => e.stopPropagation()} />
         </div>
       )}
 
