@@ -4,6 +4,16 @@ body {
   font-family: var(--font-kanit), sans-serif;
 }
 
+@layer utilities {
+      .no-scrollbar::-webkit-scrollbar {
+          display: none;
+      }
+      .no-scrollbar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+    }
+  }
+
 .nav-hover {
   @apply relative cursor-pointer py-2 px-3 transition-colors duration-200;
 }

@@ -77,7 +77,7 @@ export default function Home() {
       {isClicked && (
         <>
           <div id="about-section" className="flex justify-center items-center bg-gradient-to-b from-gray-50 to-white bg-opacity-95 px-8 z-50">
-            <div className="w-full h-[90vh] overflow-y-auto rounded-2xl p-8 bg-clear">
+            <div className="w-full h-[90vh] overflow-y-auto no-scrollbar rounded-2xl p-8 bg-clear">
               <div className="grid grid-cols-2 gap-6 mt-8 max-w-2xl mx-auto">
                 <div className="scroll-fade-up bg-white p-6 rounded-lg shadow-md">
                   <p className="flex justify-end text-gray-500 text-[15px]">1 March 2006</p>
