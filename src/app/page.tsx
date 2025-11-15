@@ -37,11 +37,11 @@ export default function Home() {
           <div onClick={() => scrollToSection("hero-section")} className="text-[20px] select-none font-bold cursor-pointer">Puxpui</div>
           {isClicked && (
             <div className="hidden md:flex gap-[25px] items-center font-semibold text-[17px]">
-              <button onClick={() => scrollToSection("hero-section")} className="nav-hover text-black hover:text-violet-600 transition">Home</button>
-              <button onClick={() => scrollToSection("about-section")} className="nav-hover text-black hover:text-violet-600 transition">About Me</button>
-              <button onClick={() => scrollToSection("project-section")} className="nav-hover text-black hover:text-violet-600 transition">Project</button>
-              <button onClick={() => scrollToSection("certificate-section")} className="nav-hover text-black hover:text-violet-600 transition">Certificate</button>
-              <button onClick={() => scrollToSection("contact-section")} className="nav-hover text-black hover:text-violet-600 transition">Contact</button>
+              <button onClick={() => scrollToSection("hero-section")} className="nav-hover text-black hover:text-sky-400 transition">Home</button>
+              <button onClick={() => scrollToSection("about-section")} className="nav-hover text-black hover:text-sky-400 transition">About Me</button>
+              <button onClick={() => scrollToSection("project-section")} className="nav-hover text-black hover:text-sky-400 transition">Project</button>
+              <button onClick={() => scrollToSection("certificate-section")} className="nav-hover text-black hover:text-sky-400 transition">Certificate</button>
+              <button onClick={() => scrollToSection("contact-section")} className="nav-hover text-black hover:text-sky-400 transition">Contact</button>
             </div>
           )}
         </div>
@@ -49,15 +49,21 @@ export default function Home() {
 
       <div id="hero-section" className="flex justify-center items-center h-screen text-[50px] font-semibold flex-col relative">
         {!isClicked ? (
-          <div className="animate-bounce text-[100px] cursor-pointer hover:scale-110 transition-transform" onClick={() => setIsClicked(true)}>🌏</div>
+          <div className="animate-bounce text-[100px] cursor-pointer hover:scale-110 transition-transform" onClick={() => setIsClicked(true)}>
+            🌏
+          </div>
         ) : (
           <div className="flex flex-col items-center justify-center space-y-6 text-center">
-            <div className="animate-fade-in text-4xl">Welcome to My Portfolio</div>
-            <div className="animate-fade-in text-2xl">Game & Software Developer</div>
-            <div className="animate-fade-in flex gap-4 text-2xl justify-center">
-              <div>💻</div>
-              <div>🎨</div>
-              <div>🚀</div>
+            <div className="text-5xl font-semibold animate-fade-in-slow">
+              Hi, I'm <span className="text-blue-300">Pui</span>
+            </div>
+            <div className="text-3xl mt-2 animate-slide-up-delay">
+              Game & Software Developer
+            </div>
+            <div className="flex gap-6 text-4xl mt-6 animate-slide-up-delay-2">
+              <div className="hover:scale-125 transition">💻</div>
+              <div className="hover:scale-125 transition">🎮</div>
+              <div className="hover:scale-125 transition">🚀</div>
             </div>
             <div className="flex justify-center mt-10 animate-bounce cursor-pointer hover:scale-110 transition-transform" onClick={() => scrollToSection("about-section")}>
               <div className="animate-fade-in w-[50px] h-[50px] flex items-center justify-center">

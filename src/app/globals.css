@@ -19,14 +19,14 @@ body {
 }
 .nav-hover::after {
   content: "";
-  @apply absolute left-0 bottom-0 w-0 h-[2px] bg-linear-to-bl from-violet-500 to-fuchsia-500 transition-all duration-300;
+  @apply absolute left-0 bottom-0 w-0 h-[2px] bg-linear-to-bl from-sky-200 to-blue-500 transition-all duration-300;
 }
 .nav-hover:hover::after {
   @apply w-full;
 }
 
 .button-class {
-  @apply cursor-pointer hover:bg-linear-to-bl from-violet-500 to-fuchsia-500 transition active:scale-110 text-white rounded-lg font-medium text-[20px] bg-[#bc77fc]
+  @apply cursor-pointer hover:bg-linear-to-bl from-sky-200 to-blue-500 transition active:scale-110 text-white rounded-lg font-medium text-[20px] bg-sky-400
 }
 
 @keyframes fade-in {
@@ -73,4 +73,34 @@ body {
 
 .animate-scroll-fade-up {
   animation: scroll-fade-up 0.8s ease-out forwards;
+}
+
+@keyframes fadeInSlow {
+0% { opacity: 0; transform: translateY(20px); }
+100% { opacity: 1; transform: translateY(0); }
+}
+
+
+@keyframes slideUp {
+0% { opacity: 0; transform: translateY(40px); }
+100% { opacity: 1; transform: translateY(0); }
+}
+
+
+.animate-fade-in-slow {
+animation: fadeInSlow 1.3s ease forwards;
+}
+
+
+.animate-slide-up-delay {
+animation: slideUp 1.4s ease forwards;
+animation-delay: 0.4s;
+opacity: 0;
+}
+
+
+.animate-slide-up-delay-2 {
+animation: slideUp 1.4s ease forwards;
+animation-delay: 0.8s;
+opacity: 0;
 }
