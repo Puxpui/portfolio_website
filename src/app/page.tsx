@@ -225,7 +225,7 @@ export default function Home() {
       )}
 
       <footer className="select-none w-full bg-gray-100 text-gray-600 py-4 text-center mt-10">
-        © 2022 Puxpui, All rights reserved.
+        © 2025 Puxpui, All rights reserved.
       </footer>
     </div>
   );
