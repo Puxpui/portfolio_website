@@ -85,7 +85,7 @@ export default function Home() {
           <div id="about-section" className="flex justify-center items-center bg-gradient-to-b from-gray-50 to-white bg-opacity-95 px-8 z-50">
             <div className="w-full h-[90vh] overflow-y-auto no-scrollbar rounded-2xl p-8 bg-clear">
               <div className="grid grid-cols-2 gap-6 mt-8 max-w-2xl mx-auto">
-                <div className="scroll-fade-up bg-white p-6 rounded-lg shadow-md">
+                <div className="bg-white p-6 rounded-lg shadow-md">
                   <p className="flex justify-end text-gray-500 text-[15px]">1 March 2006</p>
                   <div className="text-4xl mb-3">🎂</div>
                   <h3 className="font-semibold text-lg mb-2">I was born</h3>
@@ -94,13 +94,13 @@ export default function Home() {
                 </div>
                 <div></div>
                 <div></div>
-                <div className="scroll-fade-up bg-white p-6 rounded-lg shadow-md">
+                <div className="bg-white p-6 rounded-lg shadow-md">
                   <p className="flex justify-end text-gray-500 text-[15px]">2012</p>
                   <div className="text-4xl mb-3">💻</div>
                   <h3 className="font-semibold text-lg mb-2">Interested in Technology</h3>
                   <p className="text-gray-600 text-base">ผมเริ่มสนใจ Technology ตอนอายุ 6 ขวบ</p>
                 </div>
-                <div className="scroll-fade-up bg-white p-6 rounded-lg shadow-md">
+                <div className="bg-white p-6 rounded-lg shadow-md">
                   <p className="flex justify-end text-gray-500 text-[15px]">9 April 2021</p>
                   <div className="text-4xl mb-3">🎓</div>
                   <h3 className="font-semibold text-lg mb-2">Graduation</h3>
@@ -108,20 +108,20 @@ export default function Home() {
                 </div>
                 <div></div>
                 <div></div>
-                <div className="scroll-fade-up bg-white p-6 rounded-lg shadow-md">
+                <div className="bg-white p-6 rounded-lg shadow-md">
                   <p className="flex justify-end text-gray-500 text-[15px]">18 March 2024</p>
                   <div className="text-4xl mb-3">🎓</div>
                   <h3 className="font-semibold text-lg mb-2">Graduation</h3>
                   <p className="text-gray-600 text-base">สำเร็จการศึกษา<br />ระดับประกาศนียบัตรวิชาชีพ<br />สาขาคอมพิวเตอร์ธุรกิจ</p>
                 </div>
-                <div className="scroll-fade-up bg-white p-6 rounded-lg shadow-md">
+                <div className="bg-white p-6 rounded-lg shadow-md">
                   <p className="flex justify-end text-gray-500 text-[15px]">2026</p>
                   <div className="text-4xl mb-3">📖</div>
                   <h3 className="font-semibold text-lg mb-2">Studying</h3>
                   <p className="text-gray-600 text-base">กำลังศึกษา<br />ระดับประกาศนียบัตรวิชาชีพขั้นสูง<br />สาขาเทคโนโลยีธุรกิจดิจิทัล</p>
                 </div>
               </div>
-              <div className="scroll-fade-up mt-40 max-w-2xl mx-auto">
+              <div className="mt-40 max-w-2xl mx-auto">
                 <div className="bg-white p-6 rounded-lg shadow-md w-[1/2]">
                   <h3 className="font-semibold text-lg mb-2">About Me</h3>
                   <p className="text-gray-600 text-center text-base"> Hi! I'm a student in Digital Business Technology.<br />I've been passionate about technology and computers since I was six years old<br />It's always felt like magic to me. I love exploring how things work behind the screen<br />and I truly believe that programming has the power to change the world for the better.<br />My goal is to use technology to create innovative solutions that make people's lives easier and more meaningful.</p>
