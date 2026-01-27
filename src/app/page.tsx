@@ -179,6 +179,7 @@ export default function Home() {
                             {project.githubLink && <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="bg-gray-800 text-white px-6 py-2 rounded-lg hover:bg-gray-900 transition-colors">View on GitHub</a>}
                             {project.youtubeLink && <a href={project.youtubeLink} target="_blank" rel="noopener noreferrer" className="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition-colors">Watch on YouTube</a>}
                             {project.googleSiteLink && <a href={project.googleSiteLink} target="_blank" rel="noopener noreferrer" className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors">View on Google Site</a>}
+                            {project.download && <a href={project.download} target="_blank" rel="noopener noreferrer" className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors">Download</a>}
                           </div>
                         </div>
                       </div>

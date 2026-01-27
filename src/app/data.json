@@ -3,9 +3,10 @@
   {
     "id": 1,
     "title": "โครงการจบ ปวส.2: เกม 3D",
-    "description": "แนว Adventure สร้างใน Unity โดยใช้ภาษา C# ออกแบบโมเดล 3D เองด้วย Blender (กำลังพัฒนา)",
+    "description": "แนว Adventure สร้างใน Unity โดยใช้ภาษา C# ออกแบบโมเดล 3D เองด้วย Blender",
     "image": "https://i.ibb.co/spQgjgVz/image-2025-11-09-233528588.png",
-    "githubLink": "https://github.com/Puxpui/Heart-of-Valor-The-Knight-s-Journey"
+    "githubLink": "https://github.com/Puxpui/Heart-of-Valor-The-Knight-s-Journey",
+    "download": "https://drive.google.com/file/d/10ffh-5VwjPs4VwySQP8Bci2bdKppSO5A/view?usp=sharing"
   },
   {
     "id": 2,
